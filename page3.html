@@ -20,6 +20,11 @@
     <h1><a href="index.html">Кино.бай</a></h1>
     <p>Кино на любой вкус</p>
 
+    <form>
+      <input name="search" type="search" placeholder="Поиск" />
+      <button type="submit">Искать</button>
+    </form>
+
     <nav>
       <ul style="list-style-type: none;" role="menubar">
         <li role="menuitem"><a href="#">Афиша</a></li>
@@ -92,6 +97,50 @@
         </table>
       </footer>
   </article>
+
+  <section>
+    <hr />
+    <form>
+      <div>
+        <label for="username">Имя Фамилия:</label>
+        <input id="username" name="username" type="text" required />
+      </div>
+      <br />
+      <div>
+        <label for="email">Почта:</label>
+        <input id="email" name="email" type="email" required />
+      </div>
+      <br />
+      <div>
+        <details>
+          <summary>Дополнительная информация</summary>
+          <fieldset>
+            <legend>Пол</legend>
+            <label for="male">
+              <input id="male" type="radio" name="sex" />
+              Мужской
+            </label>
+            <label for="female">
+              <input id="female" type="radio" name="sex" />
+              Женский
+            </label>
+          </fieldset>
+          <div>
+            <label for="recommendation">
+              <input id="recommendation" type="checkbox" name="recommendation" />
+              Буду рекомендовать фильм
+            </label>
+          </div>
+        </details>
+        <br />
+        <div>
+          <textarea name="comment" required></textarea>
+        </div>
+        <button type="submit">Добавить комментарий</button>
+      </div>
+    </form>
+  </section>
+
 </main>
 
 <!— Секция, которая не будет меняться от страницы к странице (Подвал)—>
