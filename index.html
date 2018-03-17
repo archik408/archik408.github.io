@@ -7,10 +7,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
+      /* Normalization */
 
       body {
+        background: #d5d5d5 url(assets/images/back.jpg) 50% 0 no-repeat;
         color: #333;
         font: .8em tahoma, verdana, arial normal;
+
+        --orangeColor: #f60;
       }
 
       a {
@@ -18,49 +22,134 @@
         color: inherit;
       }
 
-      a:hover, mark, h1
-      {
-        color: #f60;
+      a:hover, mark, h1 {
+        background: transparent;
+        color: var(--orangeColor);
       }
 
-      h1 {
+      h1, h1 a {
         font-size: 1.3em;
         font-weight: normal;
       }
 
-     img {
+      img {
         height: 25em;
+      }
+
+      blockquote, figure {
+        margin: 0;
+        padding: 0;
       }
 
       figcaption {
         font-size: .9em;
       }
 
+      /* Header and Footer */
+
       .header-container h1 > a {
-        text-shadow: .1em .1em #4a4a4a;
+        text-shadow: .12em .12em #4a4a4a;
         font-size: 2em;
         font-weight: bold;
+        color: var(--orangeColor);
+        color: white;
       }
 
       .search-container input[type=search] {
         font-size: 1em;
+        padding: .5em;
+        border: none;
       }
 
       .search-container button {
         font-size: 1em;
         cursor: pointer;
+        border: none;
+        background: #ddd;
+        padding: .5em 1em;
+      }
+
+      .search-container button:hover {
+        background: #ccc;
       }
 
       .search-container .fa {
         color: #8e8e8e;
       }
 
+      .menubar-container {
+        background: #525252;
+      }
+
       .menubar-container ul {
         list-style-type: none;
+        margin: 0;
+        border-top: .1em solid rgba(113, 113, 113, 0.7);
       }
+
+      .menubar-container ul > li a,
+      .footer-container {
+        color: rgba(255,255,255,0.7);
+      }
+
+      .menubar-container ul > li a:hover {
+        color: white;
+      }
+
+      /* Content */
 
       .content section h1 {
         color: inherit;
+      }
+
+      .content article > header,
+      .content aside > header {
+        border-left: 4px solid var(--orangeColor);
+        background-image: linear-gradient(-180deg, #f3f3f3 0%, #dedede 100%);
+        padding: .1em 1.5em;
+      }
+
+      .header-container,
+      .menubar-container ul,
+      .footer-container,
+      .search-result-message,
+      .content main figure,
+      .content main section,
+      .content aside section,
+      .content article footer {
+        padding: 1em;
+      }
+
+      /* Center Column  */
+
+      .center_column {
+        width: 70%;
+        margin: 0 auto;
+        padding: 1.5em;
+        min-width: 550px;
+
+        --areaBackground: rgb(88, 88, 88);
+      }
+
+      .content {
+        --areaBackground: white;
+      }
+
+      .content > main,
+      .content > aside,
+      .center_column > footer,
+      .center_column > header {
+        margin: 1em;
+        background: var(--areaBackground);
+        box-shadow: 0 .1em .4em .1em rgba(51,51,51,.2);
+      }
+
+      .center_column > header {
+        border-radius: 1em 1em 0 0;
+      }
+
+      .center_column > footer {
+        border-radius: 0 0 1em 1em;
       }
     </style>
 </head>
@@ -233,7 +322,7 @@
             <h1>Чёрная Пантера</h1>
             <p>
               С первого взгляда можно решить, что Ваканда — обычная территория дикой Африки, но это не так. Здесь, в недрах пустынных земель, скрываются залежи уникального металла, способного поглощать вибрацию. Многие пытались добраться до него, разоряя всё на своём пути и принося смерть аборигенам, но каждый раз таинственный дух саванны — Чёрная Пантера — вставал на защиту угнетённых.
-              <br /><small>Читать далее...</small>
+              <br /><small><a href="#">Читать далее...</a></small>
             </p>
           </section>
           <section>
@@ -241,7 +330,7 @@
             <p>
               Пока Мстители и их союзники продолжают защищать мир от различных опасностей, с которыми не смог бы справиться один супергерой, новая угроза возникает из космоса: Танос.
               Межгалактический тиран преследует цель собрать все шесть Камней Бесконечности — артефакты невероятной силы, с помощью которых можно менять реальность по своему желанию.
-              <br /><small>Читать далее...</small>
+              <br /><small><a href="#">Читать далее...</a></small>
             </p>
           </section>
         </article>
