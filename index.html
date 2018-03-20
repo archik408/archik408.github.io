@@ -13,8 +13,6 @@
         background: #d5d5d5 url(assets/images/back.jpg) 50% 0 no-repeat;
         color: #333;
         font: .8em tahoma, verdana, arial normal;
-
-        --orangeColor: #f60;
       }
 
       a {
@@ -22,9 +20,30 @@
         color: inherit;
       }
 
-      a:hover, mark, h1 {
+      mark {
         background: transparent;
-        color: var(--orangeColor);
+      }
+
+      a[href="#top"] {
+        position: relative;
+      }
+
+      a[href="#top"]:after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: .35em solid transparent;
+        border-right: .35em solid transparent;
+        border-bottom: .7em solid currentColor;
+        position: absolute;
+        top: .3em;
+        left: 3.7em;
+      }
+
+      a:hover, mark, h1,
+      .content article > header,
+      .content aside > header {
+        color: #f60;
       }
 
       h1, h1 a {
@@ -42,16 +61,26 @@
       }
 
       figcaption {
+        text-align: center;
         font-size: .9em;
       }
 
       /* Header and Footer */
+      .header-container,
+      .menubar-container ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .header-container {
+        justify-content: space-between;
+      }
 
       .header-container h1 > a {
         text-shadow: .12em .12em #4a4a4a;
         font-size: 2em;
         font-weight: bold;
-        color: var(--orangeColor);
         color: white;
       }
 
@@ -67,6 +96,7 @@
         border: none;
         background: #ddd;
         padding: .5em 1em;
+        float: right;
       }
 
       .search-container button:hover {
@@ -83,6 +113,7 @@
 
       .menubar-container ul {
         list-style-type: none;
+        justify-content: center;
         margin: 0;
         border-top: .1em solid rgba(113, 113, 113, 0.7);
       }
@@ -94,6 +125,7 @@
 
       .menubar-container ul > li a:hover {
         color: white;
+        background: #636363;
       }
 
       /* Content */
@@ -104,13 +136,14 @@
 
       .content article > header,
       .content aside > header {
-        border-left: 4px solid var(--orangeColor);
+        border-left: 4px solid currentColor;
         background-image: linear-gradient(-180deg, #f3f3f3 0%, #dedede 100%);
         padding: .1em 1.5em;
       }
 
       .header-container,
       .menubar-container ul,
+      .menubar-container ul > li a,
       .footer-container,
       .search-result-message,
       .content main figure,
@@ -131,8 +164,21 @@
         --areaBackground: rgb(88, 88, 88);
       }
 
-      .content {
+      .content,
+      .movie-description {
+      display: flex;
+      flex-direction: row;
+
         --areaBackground: white;
+      }
+
+      .content > main {
+        flex: 3;
+      }
+
+      .content > aside {
+        font-size: .8em;
+        flex: 1;
       }
 
       .content > main,
@@ -160,15 +206,15 @@
           <h1><a href="index.html">Кино.бай</a></h1>
 
           <div class="search-container">
-            <form>
+            <form role="search">
               <input name="search" type="search" placeholder="Поиск..." />
-              <button type="submit"><span class="fa fa-search"></span></button>
+              <button type="submit" aria-label="Искать"><span class="fa fa-search"></span></button>
             </form>
           </div>
         </div>
 
         <nav class="menubar-container">
-          <ul role="menubar">
+          <ul role="menubar" aria-orientation="horizontal">
             <li role="menuitem"><a href="#">Афиша</a></li>
             <li role="menuitem"><a href="#">Фильмы</a></li>
             <li role="menuitem"><a href="#">Рейтинги</a></li>
@@ -227,7 +273,6 @@
                   </p>
               </footer>
           </article>
-          <br />
           <article>
               <header>
                   <h1>
@@ -269,7 +314,6 @@
                   </p>
               </footer>
           </article>
-          <br />
           <article>
               <header>
                   <h1>
@@ -310,7 +354,6 @@
                   </p>
               </footer>
           </article>
-          <br />
       </main>
 
       <aside>
