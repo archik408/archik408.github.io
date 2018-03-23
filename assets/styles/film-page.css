@@ -1,0 +1,69 @@
+
+iframe, video {
+  width: 100%;
+  height: auto;
+}
+
+/* Comments Area */
+
+.comments button {
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+  background: var(--buttonColor);
+  padding: .6em 1em;
+  margin-right: 1.6em;
+}
+
+.comments button:hover {
+  background: var(--buttonHoverColor);
+}
+
+
+.content .trailer h1 {
+  background: #f2f2f2;
+  color: var(--headersColor);
+  padding: .5em;
+}
+
+.content article footer table {
+  width: 100%;
+}
+
+.content article footer th {
+  color: white;
+  background: var(--headersColor);
+}
+
+.content article footer td {
+  padding: .5em;
+  text-align: center;
+  background: #ef643733;
+}
+
+.content .comments {
+  margin: 1em;
+  padding: 2em;
+  background: #e6e6e6;
+}
+
+.comments input,
+.comments textarea {
+  border: none;
+  font-size: 1em;
+  width: 100%;
+}
+
+.comments form > div {
+  margin: 1em 0;
+}
+
+.comments textarea {
+  height: 10em;
+  resize: none;
+}
+
+.comments .required:after {
+  content: ' *';
+  color: red;
+}
