@@ -1,0 +1,53 @@
+
+/* Headers */
+
+h1 a:hover {
+  filter: url(#blurMe);
+}
+
+/* Tooltip */
+
+abbr {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted currentColor;
+}
+
+abbr .tooltip {
+  visibility: hidden;
+  width: 12em;
+  background-color: black;
+  opacity: 0.5;
+  color: white;
+  text-align: center;
+  border-radius: .6em;
+  padding: .5em 0;
+  margin-top: .9em;
+  position: absolute;
+  top: 1em;
+  left: 0;
+  z-index: 1;
+}
+
+abbr .tooltip:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: .35em solid transparent;
+  border-right: .45em solid transparent;
+  border-bottom: .7em solid black;
+  top: -.6em;
+  left: .7em;
+  position: absolute;
+}
+
+abbr:hover .tooltip {
+  visibility: visible;
+  transition: 1s;
+}
+
+/* Content */
+
+.search-result-message {
+  padding: 1em;
+}

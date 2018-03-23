@@ -4,200 +4,9 @@
     <meta charset="utf-8" />
     <!-- <base href="https://archik408.github.io/index.html" /> -->
     <title>Кино.бай</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <style>
-      /* Normalization */
-
-      body {
-        background: #d5d5d5 url(assets/images/back.jpg) 50% 0 no-repeat;
-        color: #333;
-        font: .8em tahoma, verdana, arial normal;
-      }
-
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
-
-      mark {
-        background: transparent;
-      }
-
-      a[href="#top"] {
-        position: relative;
-      }
-
-      a[href="#top"]:after {
-        content: '';
-        width: 0;
-        height: 0;
-        border-left: .35em solid transparent;
-        border-right: .35em solid transparent;
-        border-bottom: .7em solid currentColor;
-        position: absolute;
-        top: .3em;
-        left: 3.7em;
-      }
-
-      a:hover, mark, h1,
-      .content article > header,
-      .content aside > header {
-        color: #f60;
-      }
-
-      h1, h1 a {
-        font-size: 1.3em;
-        font-weight: normal;
-      }
-
-      img {
-        height: 25em;
-      }
-
-      blockquote, figure {
-        margin: 0;
-        padding: 0;
-      }
-
-      figcaption {
-        text-align: center;
-        font-size: .9em;
-      }
-
-      /* Header and Footer */
-      .header-container,
-      .menubar-container ul {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-      }
-
-      .header-container {
-        justify-content: space-between;
-      }
-
-      .header-container h1 > a {
-        text-shadow: .12em .12em #4a4a4a;
-        font-size: 2em;
-        font-weight: bold;
-        color: white;
-      }
-
-      .search-container input[type=search] {
-        font-size: 1em;
-        padding: .5em;
-        border: none;
-      }
-
-      .search-container button {
-        font-size: 1em;
-        cursor: pointer;
-        border: none;
-        background: #ddd;
-        padding: .5em 1em;
-        float: right;
-      }
-
-      .search-container button:hover {
-        background: #ccc;
-      }
-
-      .search-container .fa {
-        color: #8e8e8e;
-      }
-
-      .menubar-container {
-        background: #525252;
-      }
-
-      .menubar-container ul {
-        list-style-type: none;
-        justify-content: center;
-        margin: 0;
-        border-top: .1em solid rgba(113, 113, 113, 0.7);
-      }
-
-      .menubar-container ul > li a,
-      .footer-container {
-        color: rgba(255,255,255,0.7);
-      }
-
-      .menubar-container ul > li a:hover {
-        color: white;
-        background: #636363;
-      }
-
-      /* Content */
-
-      .content section h1 {
-        color: inherit;
-      }
-
-      .content article > header,
-      .content aside > header {
-        border-left: 4px solid currentColor;
-        background-image: linear-gradient(-180deg, #f3f3f3 0%, #dedede 100%);
-        padding: .1em 1.5em;
-      }
-
-      .header-container,
-      .menubar-container ul,
-      .menubar-container ul > li a,
-      .footer-container,
-      .search-result-message,
-      .content main figure,
-      .content main section,
-      .content aside section,
-      .content article footer {
-        padding: 1em;
-      }
-
-      /* Center Column  */
-
-      .center_column {
-        width: 70%;
-        margin: 0 auto;
-        padding: 1.5em;
-        min-width: 550px;
-
-        --areaBackground: rgb(88, 88, 88);
-      }
-
-      .content,
-      .movie-description {
-      display: flex;
-      flex-direction: row;
-
-        --areaBackground: white;
-      }
-
-      .content > main {
-        flex: 3;
-      }
-
-      .content > aside {
-        font-size: .8em;
-        flex: 1;
-      }
-
-      .content > main,
-      .content > aside,
-      .center_column > footer,
-      .center_column > header {
-        margin: 1em;
-        background: var(--areaBackground);
-        box-shadow: 0 .1em .4em .1em rgba(51,51,51,.2);
-      }
-
-      .center_column > header {
-        border-radius: 1em 1em 0 0;
-      }
-
-      .center_column > footer {
-        border-radius: 0 0 1em 1em;
-      }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="assets/styles/base.css" />
+    <link rel="stylesheet" href="assets/styles/index.css" />
 </head>
 <body>
   <div class="center_column">
@@ -222,7 +31,6 @@
             <li role="menuitem"><a href="#">Оскар 2018</a></li>
           </ul>
         </nav>
-
     </header>
 
     <div class="content">
@@ -230,7 +38,6 @@
           <div class="search-result-message">
             <p>Результаты поиска по запросу: <strong><mark>Властелин колец</mark></strong></p>
           </div>
-
           <hr />
 
           <article>
@@ -267,7 +74,11 @@
               <footer>
                   <p>
                       <strong>Год:</strong> <time datetime="2003-12-23">2003</time>,
-                      <strong>Оценка IMDb:</strong> 8.90 <small>(1 349 172)</small>,
+                      <strong>Оценка
+                        <abbr aria-label="Internet Movie Database">IMDb
+                          <span aria-hidden="true" class="tooltip">Internet Movie Database</span>
+                        </abbr>:
+                      </strong> 8.90 <small>(1 349 172)</small>,
                       <strong>Бюджет:</strong> $94 000 000,
                       <strong>Страна:</strong> США
                   </p>
@@ -308,7 +119,11 @@
               <footer>
                   <p>
                       <strong>Год:</strong> <time datetime="2003-12-23">2002</time>,
-                      <strong>Оценка IMDb:</strong> 8.70 <small>(1 221 214)</small>,
+                      <strong>Оценка
+                        <abbr aria-label="Internet Movie Database">IMDb
+                          <span aria-hidden="true" class="tooltip">Internet Movie Database</span>
+                        </abbr>:
+                      </strong> 8.70 <small>(1 221 214)</small>,
                       <strong>Бюджет:</strong> $94 000 000,
                       <strong>Страна:</strong> США
                   </p>
@@ -348,7 +163,11 @@
               <footer>
                   <p>
                       <strong>Год:</strong> <time datetime="2003-12-23">2001</time>,
-                      <strong>Оценка IMDb:</strong> 8.80 <small>(1 389 831)</small>,
+                      <strong>Оценка
+                        <abbr aria-label="Internet Movie Database">IMDb
+                          <span aria-hidden="true" class="tooltip">Internet Movie Database</span>
+                        </abbr>:
+                      </strong> 8.80 <small>(1 389 831)</small>,
                       <strong>Бюджет:</strong> $93 000 000,
                       <strong>Страна:</strong> США
                   </p>
@@ -365,7 +184,7 @@
             <h1>Чёрная Пантера</h1>
             <p>
               С первого взгляда можно решить, что Ваканда — обычная территория дикой Африки, но это не так. Здесь, в недрах пустынных земель, скрываются залежи уникального металла, способного поглощать вибрацию. Многие пытались добраться до него, разоряя всё на своём пути и принося смерть аборигенам, но каждый раз таинственный дух саванны — Чёрная Пантера — вставал на защиту угнетённых.
-              <br /><small><a href="#">Читать далее...</a></small>
+              <br /><small>Читать далее...</small>
             </p>
           </section>
           <section>
@@ -373,7 +192,7 @@
             <p>
               Пока Мстители и их союзники продолжают защищать мир от различных опасностей, с которыми не смог бы справиться один супергерой, новая угроза возникает из космоса: Танос.
               Межгалактический тиран преследует цель собрать все шесть Камней Бесконечности — артефакты невероятной силы, с помощью которых можно менять реальность по своему желанию.
-              <br /><small><a href="#">Читать далее...</a></small>
+              <br /><small>Читать далее...</small>
             </p>
           </section>
         </article>
@@ -400,5 +219,15 @@
       </div>
     </footer>
   </div>
+
+  <svg
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink">
+   <defs>
+     <filter id="blurMe">
+       <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+     </filter>
+   </defs>
+  </svg>
 </body>
 </html>
