@@ -2,6 +2,8 @@
 <html>
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <!-- <base href="https://archik408.github.io/index.html" /> -->
     <title>Кино.бай</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -23,13 +25,17 @@
         </div>
 
         <nav class="menubar-container">
-          <ul role="menubar" aria-orientation="horizontal">
-            <li role="menuitem"><a href="#">Афиша</a></li>
-            <li role="menuitem"><a href="#">Фильмы</a></li>
-            <li role="menuitem"><a href="#">Рейтинги</a></li>
-            <li role="menuitem"><a href="#">Журнал</a></li>
-            <li role="menuitem"><a href="#">Оскар 2018</a></li>
-          </ul>
+          <div class="opened-menu">
+            <div class="menu-bars" aria-label="Открыть меню"><span class="fa fa-bars"></span></div>
+
+            <ul role="menubar">
+              <li role="menuitem"><a href="#">Афиша</a></li>
+              <li role="menuitem"><a href="#">Фильмы</a></li>
+              <li role="menuitem"><a href="#">Рейтинги</a></li>
+              <li role="menuitem"><a href="#">Журнал</a></li>
+              <li role="menuitem"><a href="#">Оскар 2018</a></li>
+            </ul>
+          </div>
         </nav>
 
     </header>

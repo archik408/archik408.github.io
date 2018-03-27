@@ -1,13 +1,17 @@
+svg {
+  height: 0;
+}
 
 /* Headers */
 
-h1 a:hover {
+article h1 a:hover {
   filter: url(#blurMe);
 }
 
 /* Tooltip */
 
 abbr {
+  font-size: .8rem;
   position: relative;
   display: inline-block;
   border-bottom: 1px dotted currentColor;
