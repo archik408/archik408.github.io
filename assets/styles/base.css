@@ -218,9 +218,38 @@ a[href="#top"]:after {
   }
 
   img {
-    width: auto;
     height: 25em;
+    width: auto;
+    transition: 1s;
   }
+
+  img:hover {
+    /* animation: image 4s cubic-bezier(0.4, 0, 1, 1) alternate infinite; */
+    cursor: zoom-in;
+    transform: scale(1.5) rotate(10deg);
+    filter: contrast(1.2) saturate(1.3);
+    transition: 1.5s ease-in;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* @keyframes image {
+    0% {
+      transform: scaleY(-1) rotate(-5deg);
+    }
+    25% {
+      transform: scaleY(1) rotate(-5deg);
+    }
+    50% {
+      transform: scaleX(-1) rotate(-15deg);
+    }
+    75% {
+      transform: scaleX(1) rotate(-15deg);
+    }
+    100% {
+      transform: rotate(5deg) scale(2);
+    }
+  } */
 
   .center_column {
     padding: 1.5em;
