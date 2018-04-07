@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script>
+      'use strict';
+
+      window.onload = function () {
+        var button = window.document.getElementById('btn');
+
+        button.onclick = function () {
+          var my_var_Name = window.prompt('Enter a:', 0) || 0;
+          var b = window.prompt('Enter b:', 0) || 0;
+          var c = window.parseInt(a) + window.parseInt(b);
+
+          window.alert('Result:' + c);
+        };
+      };
+    </script>
+</head>
+<body>
+  <button id="btn">
+    Start
+  </button>
+</body>
+</html>
