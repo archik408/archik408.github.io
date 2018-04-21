@@ -229,4 +229,22 @@ window.onload = function () {
   // main.appendChild(createArticle(searchResults[0]));
   // main.appendChild(createArticle(searchResults[1]));
   // main.appendChild(createArticle(searchResults[2]));
-};
+
+  // var MyTagProto = Object.create(HTMLElement.prototype);
+  //
+  // MyTagProto.attachedCallback = function () {
+  //   this.style = "color: blue;";
+  //   var template = document.querySelector('#my-tag');
+  //   var clone = document.importNode(template.content, true);
+  //   var strongText = this.getAttribute('strong');
+  //
+  //   if (strongText) {
+  //     var strong = clone.querySelector('strong');
+  //     strong.textContent = strongText;
+  //   }
+  //
+  //   this.appendChild(clone);
+  // }
+  //
+  // document.registerElement('my-tag', { prototype: MyTagProto });
+}

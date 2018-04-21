@@ -3,6 +3,7 @@
 <script>
   var btn = document.querySelector('#ajax');
   btn.onclick = function () {
+
     var req = new XMLHttpRequest();
     req.open('GET', '/file.json', true);
     req.onreadystatechange = function (aEvt) {

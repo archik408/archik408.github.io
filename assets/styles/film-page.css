@@ -5,6 +5,20 @@ iframe, video {
 }
 
 /* Comments Area */
+.comments article {
+  outline: .1em dashed var(--headersColor);
+  padding: 1em;
+  margin-top: .5em;
+}
+
+.comments article header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
 
 .comments button {
   font-size: 1em;
