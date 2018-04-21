@@ -1,0 +1,20 @@
+<button id='ajax'>Get Data From Server</button>
+
+<script>
+  var btn = document.querySelector('#ajax');
+  btn.onclick = function () {
+    var req = new XMLHttpRequest();
+    req.open('GET', '/file.json', true);
+    req.onreadystatechange = function (aEvt) {
+      if (req.readyState == 4) {
+        if(req.status == 200) {
+          console.log(req.responseText);
+        } else {
+          console.log(req.status, 'Error loading page\n');
+        }
+      }
+    };
+    req.send(null);
+
+  }
+</script>
