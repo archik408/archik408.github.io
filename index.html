@@ -1,11 +1,38 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="keywords" content="UI Engineer, Frontend Developer, Software Engineer, Programmer, фронтенд, программист" />
+
+    <meta name="robots" content="index, follow">
+
+    <meta name="application-name" content="Artur Basak - Public CV">
+    <meta name="theme-color" content="#1d1e20">
+
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <meta name="apple-mobile-web-app-title" content="Artur Basak - Public CV">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#1d1e20">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@ArturBasak">
+    <meta name="twitter:creator" content="@ArturBasak">
+
+    <meta property="og:title" content="Artur Basak - Public CV">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arturbasak.dev">
+    <meta property="og:description" content="Artur Basak - Web/UI Engineer, Personal website, Public CV">
+    <meta property="og:locale" content="en_EN">
+    <meta name="locale" content="en">
+
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,500,700" rel="stylesheet">
-    <title>👨‍💻 Artur Basak - Personal website, public CV</title>
+    <title>👨‍💻 Artur Basak - Web/UI Engineer, Personal website, Public CV</title>
 </head>
 <style>
     :root {
@@ -48,6 +75,15 @@
         margin-top: 1.5em;
     }
 
+    h3 a {
+        text-decoration: none;
+        color: var(--text-color);
+    }
+
+    h3 a:hover {
+        color: var(--text-color);
+    }
+
     p, li {
         font-size: 1.6em;
         font-weight: 300;
@@ -81,6 +117,11 @@
         color: var(--link-color);
     }
 
+    a:focus {
+        outline: 0.125rem dotted var(--text-color);
+        outline-offset: 0.25rem;
+    }
+
     img {
         border-radius: 50%;
         width: 20em;
@@ -91,6 +132,15 @@
 
     article {
         position: relative;
+    }
+
+    footer {
+        margin-top: 4em;
+    }
+
+    footer a {
+        font-size: 1rem;
+        font-weight: 300;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -135,8 +185,8 @@
 
         <p>And for more than 10 years I have been solving problems using <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies</a> as a <a target="_blank" href="https://en.wikipedia.org/wiki/Programmer">Programmer</a>.</p>
     </section>
-    <section>
-        <h3>My career path</h3>
+    <section id="career">
+        <h3><a href="#career">My career path</a></h3>
         <ul>
             <li><b>2010</b> - Quality Assurance Engineer at *instinctools EE Labs</li>
             <li><b>2012</b> - Software Engineer at *instinctools EE Labs</li>
@@ -147,12 +197,12 @@
             <li><b>2021</b> - Software Engineering Manager at Godel Technologies</li>
         </ul>
     </section>
-    <section>
-        <h3>I helped companies or projects of</h3>
+    <section id="companies">
+        <h3><a href="#companies">I helped companies or projects of</a></h3>
         <p>McKinsey & Company, Kohl's, Daimler, SAP, Lition, Tispr, NextGate, Florence Healthcare, True Impact, instinctools, Saitodrom, Ditaworks, Kanda Software, Evonik Industries, Westernacher Consulting, Penton Media, Thumbtack, SoftServe, ThoughtWorks, CROC, Sibur Holding, and others.</p>
     </section>
-    <section>
-        <h3>My education path</h3>
+    <section id="education">
+        <h3><a href="#education">My education path</a></h3>
         <ul class="education">
             <li>
                 <span><b>2007</b> - Baranovichi Gymnasium - Computer Science Class</span>
@@ -194,12 +244,12 @@
             </li>
         </ul>
     </section>
-    <section>
-        <h3>My technical path</h3>
+    <section id="technologies">
+        <h3><a href="#technologies">My technical path</a></h3>
         <ul>
-            <li><b>School time (2005)</b> - CLI and GUI with ASCII symbols, Turbo Pascal CRT and Graph modules</li>
+            <li><b>School time (2003)</b> - CLI and GUI with ASCII symbols, Turbo Pascal CRT and Graph modules</li>
             <li><b>College time (2007)</b> - Desktop GUI with VCL and Borland Delphi, Borland C++</li>
-            <li><b>2010</b> - Desktop and Web GUIs with Eclipse SWT, RCP/RAP, JFace, qooxdoo.js</li>
+            <li><b>2010</b> - Desktop and Web GUIs with AWT, Eclipse SWT, RCP/RAP, JFace, qooxdoo.js</li>
             <li><b>2012</b> - Web UI with jQuery UI, jQuery Mobile and JavaServer Faces (JSF), XHTML</li>
             <li><b>2013</b> - Web UI with Sencha ExtJS, JavaServer Pages (JSP) and Documentum Webtop</li>
             <li><b>2014</b> - Web UI with Angular.js, Backbone.js, SASS/SCSS, LESS</li>
@@ -209,10 +259,10 @@
             <li><b>Ongoing</b> - JavaScript, HTML, CSS, Web API</li>
         </ul>
     </section>
-    <section>
-        <h3>My tools</h3>
+    <section id="tools">
+        <h3><a href="#tools">My tools</a></h3>
         <ul>
-            <li><b>My first computer:</b> Intel Pentium, </li>
+            <li><b>My first computer:</b> Intel Pentium III</li>
             <li><b>My current computer:</b> Intel Core i9</li>
             <li><b>My favorite OS:</b> MacOS (Unix)</li>
             <li><b>My favorite browser:</b> Brave (Chromium)</li>
@@ -221,8 +271,8 @@
             <li><b>My favorite paradigm:</b> Object-Oriented</li>
         </ul>
     </section>
-    <section>
-        <h3>My articles</h3>
+    <section id="articles">
+        <h3><a href="#articles">My articles</a></h3>
         <ul>
             <li><b>Smashing Magazine</b> - <a target="_blank" href="https://www.smashingmagazine.com/2020/08/application-color-schemes-css-custom-properties/">How To Configure Application Color Schemes With CSS Custom Properties</a></li>
             <li><b>Better Programming</b> - <a target="_blank" href="https://betterprogramming.pub/ui-kit-design-system-designops-e4a60e5dd277">UI Kit + Design System = DesignOps</a></li>
@@ -231,32 +281,32 @@
             <li><b>Habr</b> - <a target="_blank" href="https://habr.com/ru/post/336916/">TDD vs Test-Last [RU]</a></li>
         </ul>
     </section>
-    <section>
-        <h3>My speeches</h3>
+    <section id="speeches">
+        <h3><a href="#speeches">My speeches</a></h3>
         <ul>
             <li><b>GROCON 2019</b> - <a target="_blank" href="https://www.youtube.com/watch?v=DZd56yJgu-Q&t=2s">Test Automation strategy for Legacy System [RU]</a></li>
             <li><b>Grodno JS Meetup</b> - <a target="_blank" href="https://www.youtube.com/watch?v=f0GYECeDCU4&t=15s">Web Accessibility. What is it? [RU]</a></li>
             <li><b>GROCON 2018</b> - <a target="_blank" href="https://www.youtube.com/watch?v=geX1fQYScQU=35s">GrodnoVR - My first and last experience with ReactVR [RU]</a></li>
         </ul>
     </section>
-    <section>
-        <h3>My professional interests</h3>
-        <p>UI Programming, Automated Testing, Graphic Design, Typography, Accessibility, Human-Computer Interaction, Immersive Web</p>
+    <section id="interests">
+        <h3><a href="#interests">My professional interests</a></h3>
+        <p>Human-Computer Interaction (HCI), UI Programming, Engineering Management, Automated Testing, Graphic Design, Typography, UX and Accessibility, Immersive Web</p>
     </section>
-    <section>
-        <h3>My top of professional books</h3>
+    <section id="probooks">
+        <h3><a href="#probooks">My top of professional books</a></h3>
         <ol>
             <li>The Mythical Man-Month: Essays on Software Engineering, Fred Brooks</li>
             <li>The Inmates Are Running the Asylum, Alan Cooper</li>
+            <li>The Best Interface Is No Interface, Golden Krishna</li>
+            <li>Don't Make Me Think, Steve Krug</li>
             <li>Test Driven Development: By Example, Kent Beck</li>
             <li>Clean Code: A Handbook of Agile Software Craftsmanship, Robert Martin</li>
             <li>You Don't Know JS, Kyle Simpson</li>
-            <li>Don't Make Me Think, Steve Krug</li>
-            <li>The Best Interface Is No Interface, Golden Krishna</li>
         </ol>
     </section>
-    <section>
-        <h3>My fun</h3>
+    <section id="fun">
+        <h3><a href="#fun">My fun</a></h3>
         <ul>
             <li>Spend time with my family, play with my two kids</li>
             <li>Draw for <a target="_blank" href="https://instagram.com/belarusian_monsters">@belarusian_monsters</a></li>
@@ -264,8 +314,8 @@
             <li>Cycle</li>
         </ul>
     </section>
-    <section>
-        <h3>My top of fiction books</h3>
+    <section id="books">
+        <h3><a href="#books">My favorite fiction books</a></h3>
         <ol>
             <li>Les Misérables, Victor Hugo</li>
             <li>Notre dame de paris, Victor Hugo</li>
@@ -274,32 +324,33 @@
             <li>Twenty Thousand Leagues Under the Seas, Jules Verne</li>
         </ol>
     </section>
-    <section>
-        <h3>My top of movies</h3>
+    <section id="movies">
+        <h3><a href="#movies">My favorite movies</a></h3>
         <ol>
-            <li>The Lord of The Rings, 2001</li>
-            <li>The Godfather, 1972</li>
-            <li>Harry Potter, 2001</li>
-            <li>Game of Thrones, 2011</li>
+            <li>The Lord of The Rings, 2001-2003</li>
+            <li>Star Wars, 1977-2005</li>
+            <li>The Godfather, 1972-1990</li>
+            <li>Harry Potter, 2001-2011</li>
+            <li>Game of Thrones, 2011-2019</li>
             <li>Princess Mononoke, Nausicaä, Spirited Away, Howl's Moving Castle, My Neighbor Totoro and other animation of Hayao Miyazaki</li>
         </ol>
     </section>
-    <section>
-        <h3>My top of video games</h3>
+    <section id="games">
+        <h3><a href="#games">My favorite video games</a></h3>
         <ol>
             <li>Diablo 2</li>
+            <li>Warcraft III</li>
             <li>The Witcher</li>
             <li>Titan Quest</li>
             <li>Batman: Arkham City</li>
             <li>S.T.A.L.K.E.R.</li>
             <li>Lost Planet</li>
-            <li>Warcraft III: Frozen Throne</li>
-            <li>Mario</li>
+            <li>Mario, Pacman, BattleToads, TMNT and other 8-bit games on PolyStation (Famiclone)</li>
             <li>Pacman</li>
         </ol>
     </section>
-    <section>
-        <h3>Links</h3>
+    <section id="links">
+        <h3><a href="#links">Links</a></h3>
         <ul>
             <li><a target="_blank" href="https://www.linkedin.com/in/arturbasak">Linkedin Profile</a></li>
             <li><a target="_blank" href="https://medium.com/@arturbasak">Medium Profile</a></li>
@@ -309,7 +360,10 @@
             <li><a target="_blank" href="https://www.pinterest.com/arturbasak">Pinterest Profile</a></li>
         </ul>
     </section>
+
+    <footer>
+        <a href="#top">To the top &#8593;</a>
+    </footer>
 </article>
 </body>
-
 </html>
