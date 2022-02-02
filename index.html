@@ -130,7 +130,7 @@
         object-fit: cover;
     }
 
-    article {
+    header {
         position: relative;
     }
 
@@ -141,6 +141,25 @@
     footer a {
         font-size: 1rem;
         font-weight: 300;
+    }
+
+    footer .badges {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        margin-bottom: 2em;
+    }
+
+    footer .badges img {
+        border-radius: 0;
+        width: 10em;
+        height: 10em;
+    }
+
+    footer .badges a {
+        text-decoration: none;
+        margin-right: 2em;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -155,7 +174,7 @@
     }
 
     @media (max-width: 1139px) {
-        img {
+        header img {
             display: none;
         }
 
@@ -168,199 +187,215 @@
         .avatar {
             display: none;
         }
+
+        footer .badges img {
+            width: 6em;
+            height: 6em;
+        }
     }
 
 </style>
 <body>
 <article>
-    <img class="avatar" src="./assets/images/avatar-1.jpeg" alt="Artur is speaking at GROCON 2019 conference"
+    <header>
+        <img class="avatar" src="./assets/images/avatar-1.jpeg" alt="Artur is speaking at GROCON 2019 conference"
          style="position: absolute; left: 50em; top: -1em;">
-    <img src="./assets/images/avatar-2.jpg" alt="Artur is speaking at Grodno JS meetup"
+        <img src="./assets/images/avatar-2.jpg" alt="Artur is speaking at Grodno JS meetup"
          style="position: absolute; left: 65em; top: 8em;">
-    <img src="./assets/images/avatar-3.jpg" alt="Artur is smiling at Instinctools office"
+        <img src="./assets/images/avatar-3.jpg" alt="Artur is smiling at Instinctools office"
          style="position: absolute; left: 56em; top: 23em;">
-    <section>
-        <h1>Greetings!</h1>
-        <h2>My name is Artur Basak.</h2>
+    </header>
+    <main>
+        <section>
+            <h1>Greetings!</h1>
+            <h2>My name is Artur Basak.</h2>
 
-        <p>And for more than 10 years I have been solving problems using <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies</a> as a <a target="_blank" href="https://en.wikipedia.org/wiki/Programmer">Programmer</a>.</p>
-    </section>
-    <section id="career">
-        <h3><a href="#career">My career path</a></h3>
-        <ul>
-            <li><b>2010</b> - Quality Assurance Engineer at *instinctools EE Labs</li>
-            <li><b>2012</b> - Software Engineer at *instinctools EE Labs</li>
-            <li><b>2015</b> - Senior Software Engineer at *instinctools EE Labs</li>
-            <li><b>2017</b> - Lead Software Engineer at *instinctools EE Labs</li>
-            <li><b>2018</b> - Trainer at Hi-Tech Park Belarus: IT-Academy</li>
-            <li><b>2019</b> - Lead UI/Web Engineer at Tispr</li>
-            <li><b>2021</b> - Software Engineering Manager at Godel Technologies</li>
-        </ul>
-    </section>
-    <section id="companies">
-        <h3><a href="#companies">I helped companies or projects of</a></h3>
-        <p>McKinsey & Company, Kohl's, Daimler, SAP, Lition, Tispr, NextGate, Florence Healthcare, True Impact, instinctools, Saitodrom, Ditaworks, Kanda Software, Evonik Industries, Westernacher Consulting, Penton Media, Thumbtack, SoftServe, ThoughtWorks, CROC, Sibur Holding, and others.</p>
-    </section>
-    <section id="education">
-        <h3><a href="#education">My education path</a></h3>
-        <ul class="education">
-            <li>
-                <span><b>2007</b> - Baranovichi Gymnasium - Computer Science Class</span>
-                <small>
-                    <div>School Programming (Pascal, Intal)</div>
-                    <div>Took part in regional and city Olympiads in Informatics</div>
-                    <div><a href="http://oso.rcsz.ru/info/Olimpiad/olmp.htm">Training Network Olympiads</a> - Moscow (Pascal), under mentoring of Shevchenko T.G.</div>
-                </small>
-            </li>
-            <li>
-                <span><b>2011</b> - Technological College, Educational Institution the GRSU</span>
-                <small>
-                    <dl>
-                        <dt>Speciality:</dt>
-                        <dl>Software of Information Technologies</dl>
-                        <dt>Specialization:</dt>
-                        <dl>Programming for computer–aid design systems</dl>
-                        <dt>Qualification:</dt>
-                        <dl>Technician-programmer</dl>
-                    </dl>
-                </small>
-            </li>
-            <li>
-                <span><b>2015</b> - Yanka Kupala State University of Grodno / GRSU (not completed)</span>
-                <small>
-                    <dl>
-                        <dt>Faculty:</dt>
-                        <dl>Mathematics and Informatics</dl>
-                        <dt>Specialization:</dt>
-                        <dl>Information Technology Software</dl>
-                        <dt>Qualification:</dt>
-                        <dl>Software Engineer</dl>
-                    </dl>
-                </small>
-            </li>
-            <li>
-                <span><b>Ongoing</b> - MOOC platforms like Coursera, edX, CodeSchool, egghead, FrontendMasters, Linkedin Learning, etc.</span>
-                <small>I have a few professional certificates from <a target="_blank" href="https://w3cx.org">W3Cx</a></small>
-            </li>
-        </ul>
-    </section>
-    <section id="technologies">
-        <h3><a href="#technologies">My technical path</a></h3>
-        <ul>
-            <li><b>School time (2003)</b> - CLI and GUI with ASCII symbols, Turbo Pascal CRT and Graph modules</li>
-            <li><b>College time (2007)</b> - Desktop GUI with VCL and Borland Delphi, Borland C++</li>
-            <li><b>2010</b> - Desktop and Web GUIs with AWT, Eclipse SWT, RCP/RAP, JFace, qooxdoo.js</li>
-            <li><b>2012</b> - Web UI with jQuery UI, jQuery Mobile and JavaServer Faces (JSF), XHTML</li>
-            <li><b>2013</b> - Web UI with Sencha ExtJS, JavaServer Pages (JSP) and Documentum Webtop</li>
-            <li><b>2014</b> - Web UI with Angular.js, Backbone.js, SASS/SCSS, LESS</li>
-            <li><b>2015</b> - Web UI with Ember.js and Handlebars Templates, MEAN, Meteor, Bootstrap</li>
-            <li><b>2016</b> - Web UI with React.js, JSX, Redux and Mobx</li>
-            <li><b>2018</b> - Web UI with Next.js, Headless CMS and React VR/360</li>
-            <li><b>Ongoing</b> - JavaScript, HTML, CSS, Web API</li>
-        </ul>
-    </section>
-    <section id="tools">
-        <h3><a href="#tools">My tools</a></h3>
-        <ul>
-            <li><b>My first computer:</b> Intel Pentium III</li>
-            <li><b>My current computer:</b> Intel Core i9</li>
-            <li><b>My favorite OS:</b> MacOS (Unix)</li>
-            <li><b>My favorite browser:</b> Brave (Chromium)</li>
-            <li><b>My favorite IDE:</b> WebStorm</li>
-            <li><b>My favorite shell command:</b> ls -la</li>
-            <li><b>My favorite paradigm:</b> Object-Oriented</li>
-        </ul>
-    </section>
-    <section id="articles">
-        <h3><a href="#articles">My articles</a></h3>
-        <ul>
-            <li><b>Smashing Magazine</b> - <a target="_blank" href="https://www.smashingmagazine.com/2020/08/application-color-schemes-css-custom-properties/">How To Configure Application Color Schemes With CSS Custom Properties</a></li>
-            <li><b>Better Programming</b> - <a target="_blank" href="https://betterprogramming.pub/ui-kit-design-system-designops-e4a60e5dd277">UI Kit + Design System = DesignOps</a></li>
-            <li><b>Better Programming</b> - <a target="_blank" href="https://betterprogramming.pub/5-tips-to-help-improve-your-ui-development-environment-6ceda3827618">5 Tips to Help Improve Your UI Development Environment</a></li>
-            <li><b>Better Programming</b> - <a target="_blank" href="https://betterprogramming.pub/a-visual-tutorial-on-every-type-of-test-you-can-write-ec9b83edcf35">A Visual Tutorial on Every Type of Test You Can Write</a></li>
-            <li><b>Habr</b> - <a target="_blank" href="https://habr.com/ru/post/336916/">TDD vs Test-Last [RU]</a></li>
-        </ul>
-    </section>
-    <section id="speeches">
-        <h3><a href="#speeches">My speeches</a></h3>
-        <ul>
-            <li><b>GROCON 2019</b> - <a target="_blank" href="https://www.youtube.com/watch?v=DZd56yJgu-Q&t=2s">Test Automation strategy for Legacy System [RU]</a></li>
-            <li><b>Grodno JS Meetup</b> - <a target="_blank" href="https://www.youtube.com/watch?v=f0GYECeDCU4&t=15s">Web Accessibility. What is it? [RU]</a></li>
-            <li><b>GROCON 2018</b> - <a target="_blank" href="https://www.youtube.com/watch?v=geX1fQYScQU=35s">GrodnoVR - My first and last experience with ReactVR [RU]</a></li>
-        </ul>
-    </section>
-    <section id="interests">
-        <h3><a href="#interests">My professional interests</a></h3>
-        <p>Human-Computer Interaction (HCI), UI Programming, Engineering Management, Automated Testing, Graphic Design, Typography, UX and Accessibility, Immersive Web</p>
-    </section>
-    <section id="probooks">
-        <h3><a href="#probooks">My top of professional books</a></h3>
-        <ol>
-            <li>The Mythical Man-Month: Essays on Software Engineering, Fred Brooks</li>
-            <li>The Inmates Are Running the Asylum, Alan Cooper</li>
-            <li>The Best Interface Is No Interface, Golden Krishna</li>
-            <li>Don't Make Me Think, Steve Krug</li>
-            <li>Test Driven Development: By Example, Kent Beck</li>
-            <li>Clean Code: A Handbook of Agile Software Craftsmanship, Robert Martin</li>
-            <li>You Don't Know JS, Kyle Simpson</li>
-        </ol>
-    </section>
-    <section id="fun">
-        <h3><a href="#fun">My fun</a></h3>
-        <ul>
-            <li>Spend time with my family, play with my two kids</li>
-            <li>Draw for <a target="_blank" href="https://instagram.com/belarusian_monsters">@belarusian_monsters</a></li>
-            <li>Collect postal items for <a target="_blank" href="https://zubry.by">ZUBRY.BY</a></li>
-            <li>Cycle</li>
-        </ul>
-    </section>
-    <section id="books">
-        <h3><a href="#books">My favorite fiction books</a></h3>
-        <ol>
-            <li>Les Misérables, Victor Hugo</li>
-            <li>Notre dame de paris, Victor Hugo</li>
-            <li>The Hobbit, J.R.R. Tolkien</li>
-            <li>Maus, Art Spiegelman</li>
-            <li>Twenty Thousand Leagues Under the Seas, Jules Verne</li>
-        </ol>
-    </section>
-    <section id="movies">
-        <h3><a href="#movies">My favorite movies</a></h3>
-        <ol>
-            <li>The Lord of The Rings, 2001-2003</li>
-            <li>Star Wars, 1977-2005</li>
-            <li>The Godfather, 1972-1990</li>
-            <li>Harry Potter, 2001-2011</li>
-            <li>Game of Thrones, 2011-2019</li>
-            <li>Princess Mononoke, Nausicaä, Spirited Away, Howl's Moving Castle, My Neighbor Totoro and other animation of Hayao Miyazaki</li>
-        </ol>
-    </section>
-    <section id="games">
-        <h3><a href="#games">My favorite video games</a></h3>
-        <ol>
-            <li>Diablo 2</li>
-            <li>Warcraft III</li>
-            <li>Heroes of Might and Magic</li>
-            <li>The Witcher</li>
-            <li>Batman: Arkham City</li>
-            <li>S.T.A.L.K.E.R.</li>
-            <li>Lost Planet</li>
-            <li>Mario, Pacman, BattleToads, TMNT and other 8-bit games on PolyStation (Famiclone)</li>
-        </ol>
-    </section>
-    <section id="links">
-        <h3><a href="#links">Links</a></h3>
-        <ul>
-            <li><a target="_blank" href="https://www.linkedin.com/in/arturbasak">Linkedin Profile</a></li>
-            <li><a target="_blank" href="https://medium.com/@arturbasak">Medium Profile</a></li>
-            <li><a target="_blank" href="https://www.facebook.com/artur.basak">Facebook Profile</a></li>
-            <li><a target="_blank" href="https://twitter.com/ArturBasak">Twitter Profile</a></li>
-            <li><a target="_blank" href="https://github.com/archik408">GitHub Profile</a></li>
-            <li><a target="_blank" href="https://www.pinterest.com/arturbasak">Pinterest Profile</a></li>
-        </ul>
-    </section>
-
+            <p>And for more than 10 years I have been solving problems using <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies</a> as a <a target="_blank" href="https://en.wikipedia.org/wiki/Programmer">Programmer</a>.</p>
+        </section>
+        <section id="career">
+            <h3><a href="#career">My career path</a></h3>
+            <ul>
+                <li><b>2010</b> - Quality Assurance Engineer at *instinctools EE Labs</li>
+                <li><b>2012</b> - Software Engineer at *instinctools EE Labs</li>
+                <li><b>2015</b> - Senior Software Engineer at *instinctools EE Labs</li>
+                <li><b>2017</b> - Lead Software Engineer at *instinctools EE Labs</li>
+                <li><b>2018</b> - Trainer at Hi-Tech Park Belarus: IT-Academy</li>
+                <li><b>2019</b> - Lead UI/Web Engineer at Tispr</li>
+                <li><b>2021</b> - Software Engineering Manager at Godel Technologies</li>
+            </ul>
+        </section>
+        <section id="companies">
+            <h3><a href="#companies">I helped companies or projects of</a></h3>
+            <p>McKinsey & Company, Kohl's, Daimler, SAP, Lition, Tispr, NextGate, Florence Healthcare, True Impact, instinctools, Saitodrom, Ditaworks, Kanda Software, Evonik Industries, Westernacher Consulting, Penton Media, Thumbtack, SoftServe, ThoughtWorks, CROC, Sibur Holding, and others.</p>
+        </section>
+        <section id="education">
+            <h3><a href="#education">My education path</a></h3>
+            <ul class="education">
+                <li>
+                    <span><b>2007</b> - Baranovichi Gymnasium - Computer Science Class</span>
+                    <small>
+                        <div>School Programming (Pascal, Intal)</div>
+                        <div>Took part in regional and city Olympiads in Informatics</div>
+                        <div><a href="http://oso.rcsz.ru/info/Olimpiad/olmp.htm">Training Network Olympiads</a> - Moscow (Pascal), under mentoring of Shevchenko T.G.</div>
+                    </small>
+                </li>
+                <li>
+                    <span><b>2011</b> - Technological College, Educational Institution the GRSU</span>
+                    <small>
+                        <dl>
+                            <dt>Speciality:</dt>
+                            <dd>Software of Information Technologies</dd>
+                            <dt>Specialization:</dt>
+                            <dd>Programming for computer–aid design systems</dd>
+                            <dt>Qualification:</dt>
+                            <dd>Technician-programmer</dd>
+                        </dl>
+                    </small>
+                </li>
+                <li>
+                    <span><b>2015</b> - Yanka Kupala State University of Grodno / GRSU (not completed)</span>
+                    <small>
+                        <dl>
+                            <dt>Faculty:</dt>
+                            <dd>Mathematics and Informatics</dd>
+                            <dt>Specialization:</dt>
+                            <dd>Information Technology Software</dd>
+                            <dt>Qualification:</dt>
+                            <dd>Software Engineer</dd>
+                        </dl>
+                    </small>
+                </li>
+                <li>
+                    <span><b>Ongoing</b> - MOOC platforms like Coursera, edX, CodeSchool, egghead, FrontendMasters, Linkedin Learning, etc.</span>
+                    <small>I have a few professional certificates from <a target="_blank" href="https://w3cx.org">W3Cx</a></small>
+                </li>
+            </ul>
+        </section>
+        <section id="technologies">
+            <h3><a href="#technologies">My technical path</a></h3>
+            <ul>
+                <li><b>School time (2003)</b> - CLI and GUI with ASCII symbols, Turbo Pascal CRT and Graph modules</li>
+                <li><b>College time (2007)</b> - Desktop GUI with VCL and Borland Delphi, Borland C++</li>
+                <li><b>2010</b> - Desktop and Web GUIs with AWT, Eclipse SWT, RCP/RAP, JFace, qooxdoo.js</li>
+                <li><b>2012</b> - Web UI with jQuery UI, jQuery Mobile and JavaServer Faces (JSF), XHTML</li>
+                <li><b>2013</b> - Web UI with Sencha ExtJS, JavaServer Pages (JSP) and Documentum Webtop</li>
+                <li><b>2014</b> - Web UI with Angular.js, Backbone.js, SASS/SCSS, LESS</li>
+                <li><b>2015</b> - Web UI with Ember.js and Handlebars Templates, MEAN, Meteor, Bootstrap</li>
+                <li><b>2016</b> - Web UI with React.js, JSX, Redux and Mobx</li>
+                <li><b>2018</b> - Web UI with Next.js, Headless CMS and React VR/360</li>
+                <li><b>Ongoing</b> - JavaScript, HTML, CSS, Web API</li>
+            </ul>
+        </section>
+        <section id="tools">
+            <h3><a href="#tools">My tools</a></h3>
+            <ul>
+                <li><b>My first computer:</b> Intel Pentium III</li>
+                <li><b>My current computer:</b> Intel Core i9</li>
+                <li><b>My favorite OS:</b> MacOS (Unix)</li>
+                <li><b>My favorite browser:</b> Brave (Chromium)</li>
+                <li><b>My favorite IDE:</b> WebStorm</li>
+                <li><b>My favorite shell command:</b> ls -la</li>
+                <li><b>My favorite paradigm:</b> Object-Oriented</li>
+            </ul>
+        </section>
+        <section id="articles">
+            <h3><a href="#articles">My articles</a></h3>
+            <ul>
+                <li><b>Smashing Magazine</b> - <a target="_blank" href="https://www.smashingmagazine.com/2020/08/application-color-schemes-css-custom-properties/">How To Configure Application Color Schemes With CSS Custom Properties</a></li>
+                <li><b>Better Programming</b> - <a target="_blank" href="https://betterprogramming.pub/ui-kit-design-system-designops-e4a60e5dd277">UI Kit + Design System = DesignOps</a></li>
+                <li><b>Better Programming</b> - <a target="_blank" href="https://betterprogramming.pub/5-tips-to-help-improve-your-ui-development-environment-6ceda3827618">5 Tips to Help Improve Your UI Development Environment</a></li>
+                <li><b>Better Programming</b> - <a target="_blank" href="https://betterprogramming.pub/a-visual-tutorial-on-every-type-of-test-you-can-write-ec9b83edcf35">A Visual Tutorial on Every Type of Test You Can Write</a></li>
+                <li><b>Habr</b> - <a target="_blank" href="https://habr.com/ru/post/336916/">TDD vs Test-Last [RU]</a></li>
+            </ul>
+        </section>
+        <section id="speeches">
+            <h3><a href="#speeches">My speeches</a></h3>
+            <ul>
+                <li><b>GROCON 2019</b> - <a target="_blank" href="https://www.youtube.com/watch?v=DZd56yJgu-Q&t=2s">Test Automation strategy for Legacy System [RU]</a></li>
+                <li><b>Grodno JS Meetup</b> - <a target="_blank" href="https://www.youtube.com/watch?v=f0GYECeDCU4&t=15s">Web Accessibility. What is it? [RU]</a></li>
+                <li><b>GROCON 2018</b> - <a target="_blank" href="https://www.youtube.com/watch?v=geX1fQYScQU=35s">GrodnoVR - My first and last experience with ReactVR [RU]</a></li>
+            </ul>
+        </section>
+        <section id="interests">
+            <h3><a href="#interests">My professional interests</a></h3>
+            <p>Human-Computer Interaction (HCI), UI Programming, Engineering Management, Automated Testing, Graphic Design, Typography, UX and Accessibility, Immersive Web</p>
+        </section>
+        <section id="probooks">
+            <h3><a href="#probooks">My top of professional books</a></h3>
+            <ol>
+                <li>The Mythical Man-Month: Essays on Software Engineering, Fred Brooks</li>
+                <li>The Inmates Are Running the Asylum, Alan Cooper</li>
+                <li>The Best Interface Is No Interface, Golden Krishna</li>
+                <li>Don't Make Me Think, Steve Krug</li>
+                <li>Test Driven Development: By Example, Kent Beck</li>
+                <li>Clean Code: A Handbook of Agile Software Craftsmanship, Robert Martin</li>
+                <li>You Don't Know JS, Kyle Simpson</li>
+            </ol>
+        </section>
+        <section id="fun">
+            <h3><a href="#fun">My fun</a></h3>
+            <ul>
+                <li>Spend time with my family, play with my two kids</li>
+                <li>Draw for <a target="_blank" href="https://instagram.com/belarusian_monsters">@belarusian_monsters</a></li>
+                <li>Collect postal items for <a target="_blank" href="https://zubry.by">ZUBRY.BY</a></li>
+                <li>Cycle</li>
+            </ul>
+        </section>
+        <section id="books">
+            <h3><a href="#books">My favorite fiction books</a></h3>
+            <ol>
+                <li>Les Misérables, Victor Hugo</li>
+                <li>Notre dame de paris, Victor Hugo</li>
+                <li>The Hobbit, J.R.R. Tolkien</li>
+                <li>Maus, Art Spiegelman</li>
+                <li>Twenty Thousand Leagues Under the Seas, Jules Verne</li>
+            </ol>
+        </section>
+        <section id="movies">
+            <h3><a href="#movies">My favorite movies</a></h3>
+            <ol>
+                <li>The Lord of The Rings, 2001-2003</li>
+                <li>Star Wars, 1977-2005</li>
+                <li>The Godfather, 1972-1990</li>
+                <li>Harry Potter, 2001-2011</li>
+                <li>Game of Thrones, 2011-2019</li>
+                <li>Princess Mononoke, Nausicaä, Spirited Away, Howl's Moving Castle, My Neighbor Totoro and other animation of Hayao Miyazaki</li>
+            </ol>
+        </section>
+        <section id="games">
+            <h3><a href="#games">My favorite video games</a></h3>
+            <ol>
+                <li>Diablo 2</li>
+                <li>Warcraft III</li>
+                <li>Heroes of Might and Magic</li>
+                <li>The Witcher</li>
+                <li>Batman: Arkham City</li>
+                <li>STALKER</li>
+                <li>Lost Planet</li>
+                <li>Mario, Pacman, BattleToads, TMNT and other 8-bit games on PolyStation (Famiclone)</li>
+            </ol>
+        </section>
+        <section id="links">
+            <h3><a href="#links">Links</a></h3>
+            <ul>
+                <li><a target="_blank" href="https://www.linkedin.com/in/arturbasak">Linkedin Profile</a></li>
+                <li><a target="_blank" href="https://medium.com/@arturbasak">Medium Profile</a></li>
+                <li><a target="_blank" href="https://www.facebook.com/artur.basak">Facebook Profile</a></li>
+                <li><a target="_blank" href="https://twitter.com/ArturBasak">Twitter Profile</a></li>
+                <li><a target="_blank" href="https://github.com/archik408">GitHub Profile</a></li>
+                <li><a target="_blank" href="https://www.pinterest.com/arturbasak">Pinterest Profile</a></li>
+            </ul>
+        </section>
+    </main>
     <footer>
+        <div class="badges">
+            <a target="_blank" href="https://credentials.edx.org/credentials/54aa166a78d8435aaf94d4ad293af7b6" aria-label="Earner of Professional Front-end Developer Certificate by W3Cx">
+                <img src="./assets/images/FEWD-badge-PR.png" aria-hidden="true" alt>
+            </a>
+            <a target="_blank" href="https://www.credly.com/badges/b0d5056f-63d1-4550-aa76-58d4688725bc" aria-label="Earner of OpenJS Foundation: the OpenJS Foundation’s individual supporter program">
+                <img src="./assets/images/JSLandia-icon.svg" aria-hidden="true" alt>
+            </a>
+        </div>
         <a href="#top">To the top &#8593;</a>
     </footer>
 </article>
