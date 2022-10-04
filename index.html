@@ -36,9 +36,9 @@
     <title>👨‍💻 Artur Basak - Web/UI Engineer, Personal website, Public CV</title>
     <style>
         :root {
-            --bg-color: white;
-            --text-color: #121314;
-            --link-color: #4E8CBC;
+            --bg-color: #08415c;
+            --text-color: #f1ab86;
+            --link-color: white;
         }
 
         input {
@@ -81,7 +81,7 @@
 
         h3 a {
             text-decoration: none;
-            color: var(--text-color);
+            color: var(--link-color);
         }
 
         h3 a:hover {
@@ -113,12 +113,12 @@
 
         a {
             text-decoration: underline;
-            color: var(--text-color);
+            color: var(--link-color);
             position: relative;
         }
 
         a:hover {
-            color: var(--link-color);
+            color: var(--text-color);
         }
 
         a:focus {
@@ -130,7 +130,7 @@
             border-radius: 50%;
             width: 20em;
             height: 20em;
-            filter: brightness(0.9) contrast(1.1);
+            filter: grayscale(1);
             object-fit: cover;
         }
 
@@ -166,16 +166,16 @@
             margin-right: 2em;
         }
 
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --bg-color: #333;
-                --text-color: white;
-            }
+        /*@media (prefers-color-scheme: dark) {*/
+        /*    :root {*/
+        /*        --bg-color: #333;*/
+        /*        --text-color: white;*/
+        /*    }*/
 
-            img {
-                filter: brightness(0.8) contrast(1.1);
-            }
-        }
+        /*    img {*/
+        /*        filter: brightness(0.8) contrast(1.1);*/
+        /*    }*/
+        /*}*/
 
         @media (max-width: 1139px) {
             header img {
